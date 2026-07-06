@@ -8,7 +8,7 @@ void AMainMenuPlayerController::BeginPlay()
 {
     Super::BeginPlay();
     
-    //checkf(!MainMenuWidgetClass, TEXT("MainMenuPlayerController: MainMenuWidget Class not assigned"));
+    checkf(MainMenuWidgetClass, TEXT("MainMenuPlayerController: MainMenuWidget Class not assigned"));
     
     UUserWidget* MainMenuWidget = CreateWidget<UUserWidget>(this, MainMenuWidgetClass);
 
