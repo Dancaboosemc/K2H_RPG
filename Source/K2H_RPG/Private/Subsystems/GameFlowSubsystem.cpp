@@ -31,12 +31,7 @@ void UGameFlowSubsystem::QuitGame()
 
     if (APlayerController* PC = GetWorld()->GetFirstPlayerController())
     {
-        UKismetSystemLibrary::QuitGame(
-            this,
-            PC,
-            EQuitPreference::Quit,
-            false
-        );
+        UKismetSystemLibrary::QuitGame(this, PC, EQuitPreference::Quit, false);
     }
 }
 
