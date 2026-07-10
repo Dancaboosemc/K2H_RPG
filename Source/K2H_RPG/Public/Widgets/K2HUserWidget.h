@@ -19,4 +19,7 @@ public:
 	UFUNCTION(BlueprintNativeEvent, Category = "Lifecycle")
 	void OnShown();
 
+	UFUNCTION(BlueprintNativeEvent, Category = "UI")
+	UWidget* GetInitialFocusWidget() const;
+
 };

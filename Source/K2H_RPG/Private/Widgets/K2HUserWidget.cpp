@@ -6,3 +6,8 @@
 void UK2HUserWidget::OnShown_Implementation()
 {
 }
+
+UWidget* UK2HUserWidget::GetInitialFocusWidget_Implementation() const
+{
+    return nullptr;
+}

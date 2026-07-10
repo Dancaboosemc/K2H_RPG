@@ -4,6 +4,16 @@
 #include "Subsystems/GameFlowSubsystem.h"
 #include "Kismet/GameplayStatics.h"
 
+void UGameFlowSubsystem::Initialize(FSubsystemCollectionBase& Collection)
+{
+    Super::Initialize(Collection);
+}
+
+void UGameFlowSubsystem::Deinitialize()
+{
+    Super::Deinitialize();
+}
+
 void UGameFlowSubsystem::PlayIntro()
 {
     /*if (GEngine)

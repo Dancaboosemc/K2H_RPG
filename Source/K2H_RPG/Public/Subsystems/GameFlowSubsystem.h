@@ -16,6 +16,9 @@ class K2H_RPG_API UGameFlowSubsystem : public UGameInstanceSubsystem
 	
 public:
 
+	virtual void Initialize(FSubsystemCollectionBase& Collection) override;
+	virtual void Deinitialize() override;
+
 	UFUNCTION(BlueprintCallable, Category = "Game Flow")
 	void PlayIntro();
 

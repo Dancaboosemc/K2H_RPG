@@ -14,8 +14,9 @@ public class K2H_RPG : ModuleRules
 			"Engine", 
 			"InputCore", 
 			"EnhancedInput",
-			"UMG"
-		});
+			"UMG",
+			"K2HDeveloperSettings"
+        });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {  });
 

@@ -3,6 +3,7 @@
 
 #include "PlayerControllers/MainMenuPlayerController.h"
 #include "Blueprint/UserWidget.h"
+#include "Widgets/K2HUserWidget.h"
 
 void AMainMenuPlayerController::BeginPlay()
 {
@@ -10,11 +11,19 @@ void AMainMenuPlayerController::BeginPlay()
     
     checkf(MainMenuWidgetClass, TEXT("MainMenuPlayerController: MainMenuWidget Class not assigned"));
     
-    UUserWidget* MainMenuWidget = CreateWidget<UUserWidget>(this, MainMenuWidgetClass);
+    UK2HUserWidget* MainMenuWidget = CreateWidget<UK2HUserWidget>(this, MainMenuWidgetClass);
 
     MainMenuWidget->AddToViewport();
 
-    bShowMouseCursor = true;
+    FInputModeUIOnly InputMode;
+    InputMode.SetWidgetToFocus(MainMenuWidget->TakeWidget());
 
-    SetInputMode(FInputModeUIOnly());
+    SetInputMode(InputMode);
+    SetShowMouseCursor(true);
+
+   if (UWidget* InitialFocus = MainMenuWidget->GetInitialFocusWidget())
+    {
+        InitialFocus->SetKeyboardFocus();
+        UE_LOG(LogTemp, Warning, TEXT("Setting focus to: %s"), *InitialFocus->GetName());
+    }
 }
