@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
+#include "Subsystems/K2HGameInstanceSubsystem.h"
 #include "GameFlowSubsystem.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class K2H_RPG_API UGameFlowSubsystem : public UGameInstanceSubsystem
+class K2H_RPG_API UGameFlowSubsystem : public UK2HGameInstanceSubsystem
 {
 	GENERATED_BODY()
 	

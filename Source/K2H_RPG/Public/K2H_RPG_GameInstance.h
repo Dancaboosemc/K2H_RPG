@@ -8,6 +8,7 @@
 
 class UGameFlowSubsystem;
 class UAudioSubsystem;
+class UUISubsystem;
 /**
  * 
  */
@@ -20,13 +21,10 @@ public:
 
 	virtual void Init() override;
 
-	UGameFlowSubsystem* GetFlowSubsystem();
-	UAudioSubsystem* GetAudioSubsystem();
-
 private:
 
 	TObjectPtr<UGameFlowSubsystem> FlowSubsystem;
-
 	TObjectPtr<UAudioSubsystem> AudioSubsystem;
+	TObjectPtr<UUISubsystem> UISubsystem;
 
 };

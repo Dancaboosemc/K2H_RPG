@@ -14,7 +14,12 @@ public class K2H_RPG : ModuleRules
 			"Engine", 
 			"InputCore", 
 			"EnhancedInput",
-			"UMG",
+            "UMG",
+			"Slate",
+			"SlateCore",
+            "CommonUI",
+            "CommonInput",
+            "GameplayTags",
 			"K2HDeveloperSettings"
         });
 

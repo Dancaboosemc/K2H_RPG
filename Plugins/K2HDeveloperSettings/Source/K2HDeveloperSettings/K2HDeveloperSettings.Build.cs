@@ -26,7 +26,9 @@ public class K2HDeveloperSettings : ModuleRules
 			new string[]
 			{
 				"Core",
-				"DeveloperSettings"
+				"DeveloperSettings",
+                "GameplayTags",
+                "UMG"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

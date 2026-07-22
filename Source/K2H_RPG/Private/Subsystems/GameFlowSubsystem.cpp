@@ -16,21 +16,11 @@ void UGameFlowSubsystem::Deinitialize()
 
 void UGameFlowSubsystem::PlayIntro()
 {
-    /*if (GEngine)
-    {
-        GEngine->AddOnScreenDebugMessage(-1, 8.0f, FColor::Green, TEXT("Playing Intro"));
-    }
-	UE_LOG(LogTemp, Log, TEXT("Playing Intro"));*/
+   //Not sure if this is needed or not
 }
 
 void UGameFlowSubsystem::ToMainMenu()
 {
-    /*if (GEngine)
-    {
-        GEngine->AddOnScreenDebugMessage(-1, 8.0f, FColor::Green, TEXT("Main Menu"));
-    }
-	UE_LOG(LogTemp, Log, TEXT("Main Menu"));*/
-
     //setup maps data asset and come back here
     UGameplayStatics::OpenLevel(this, FName("MainMenu"));
 }

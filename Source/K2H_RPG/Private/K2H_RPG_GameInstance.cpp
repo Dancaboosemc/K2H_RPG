@@ -4,6 +4,7 @@
 #include "K2H_RPG_GameInstance.h"
 #include "Subsystems/GameFlowSubsystem.h"
 #include "Subsystems/AudioSubsystem.h"
+#include "Subsystems/UISubsystem.h"
 
 void UK2H_RPG_GameInstance::Init()
 {
@@ -11,15 +12,6 @@ void UK2H_RPG_GameInstance::Init()
 
 	FlowSubsystem = NewObject<UGameFlowSubsystem>(this);
 	AudioSubsystem = NewObject<UAudioSubsystem>(this);
+	UISubsystem = NewObject<UUISubsystem>(this);
 	
-}
-
-UGameFlowSubsystem* UK2H_RPG_GameInstance::GetFlowSubsystem()
-{
-	return nullptr;
-}
-
-UAudioSubsystem* UK2H_RPG_GameInstance::GetAudioSubsystem()
-{
-	return nullptr;
 }

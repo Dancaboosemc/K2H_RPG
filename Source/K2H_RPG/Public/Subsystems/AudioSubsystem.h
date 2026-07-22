@@ -3,7 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Subsystems/GameInstanceSubsystem.h"
+#include "Subsystems/K2HGameInstanceSubsystem.h"
 #include "Types/K2HAudioSettings.h"
 
 #include "AudioSubsystem.generated.h"
@@ -25,7 +25,7 @@ DECLARE_MULTICAST_DELEGATE_OneParam(FOnAudioSettingsChanged,const FK2HAudioSetti
  * 
  */
 UCLASS()
-class K2H_RPG_API UAudioSubsystem : public UGameInstanceSubsystem
+class K2H_RPG_API UAudioSubsystem : public UK2HGameInstanceSubsystem
 {
 	GENERATED_BODY()
 	
