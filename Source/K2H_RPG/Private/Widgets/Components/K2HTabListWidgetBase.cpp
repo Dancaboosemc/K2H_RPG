@@ -6,11 +6,13 @@
 #include "Widgets/Components/K2HCommonButtonBase.h"
 
 #if WITH_EDITOR	
-void UK2HTabListWidgetBase::RequestRegisterTab(const FName& InTabID, const FText& InTabDisplayName)
+void UK2HTabListWidgetBase::RequestRegisterTab(const FGameplayTag& InTabID, const FText& InTabDisplayName)
 {
-	RegisterTab(InTabID, TabButtonEntryWidgetClass, nullptr, -1);
+	//pass ID and widget class to base implementation to register the tab with the list
+	RegisterTab(FName(*InTabID.ToString()), TabButtonEntryWidgetClass, nullptr, -1);
 
-	if (UK2HCommonButtonBase* FoundButton = Cast<UK2HCommonButtonBase>(GetTabButtonBaseByID(InTabID)))
+	//Check if button was registered and set it's display text
+	if (UK2HCommonButtonBase* FoundButton = Cast<UK2HCommonButtonBase>(GetTabButtonBaseByID(FName(*InTabID.ToString()))))
 	{
 		FoundButton->SetButtonText(InTabDisplayName);
 	}

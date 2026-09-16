@@ -1,8 +1,10 @@
 // Daniel McPherson, All Rights Reserved
 
 
-#include "Subsystems/GameFlowSubsystem.h"
+#include "GameSubsystems/GameFlowSubsystem.h"
 #include "Kismet/GameplayStatics.h"
+#include "K2HFunctionLibrary.h"
+#include "K2HGameplayTags.h"
 
 void UGameFlowSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -14,15 +16,13 @@ void UGameFlowSubsystem::Deinitialize()
     Super::Deinitialize();
 }
 
-void UGameFlowSubsystem::PlayIntro()
-{
-   //Not sure if this is needed or not
-}
-
 void UGameFlowSubsystem::ToMainMenu()
 {
-    //setup maps data asset and come back here
-    UGameplayStatics::OpenLevel(this, FName("MainMenu"));
+    const TSoftObjectPtr<UWorld> Level = UK2HFunctionLibrary::GetSoftLevelByTag(K2HGameplayTags::Level_MainMenu);
+
+    //TODO GAME FlOW: Revist here when thinking about load times and Loading screen flow
+    if (!Level.IsNull())
+        UGameplayStatics::OpenLevel(this, FName(*Level.GetLongPackageName()));
 }
 
 void UGameFlowSubsystem::QuitGame()

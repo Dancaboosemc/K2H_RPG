@@ -10,7 +10,7 @@ class UGameFlowSubsystem;
 class UAudioSubsystem;
 class UUISubsystem;
 /**
- * 
+ * Has Subsystems for managing GameFlow, UI and Audio
  */
 UCLASS()
 class K2H_RPG_API UK2H_RPG_GameInstance : public UGameInstance

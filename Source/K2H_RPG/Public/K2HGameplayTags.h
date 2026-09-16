@@ -1,0 +1,51 @@
+// Daniel McPherson, All Rights Reserved
+
+#pragma once
+
+#include "NativeGameplayTags.h"
+
+/**
+ * GameplayTags needed for UI 
+ */
+
+namespace K2HGameplayTags
+{
+	//Widget Stack
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(WidgetStack_Modal);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(WidgetStack_GameMenu);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(WidgetStack_GameHud);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(WidgetStack_Frontend);
+
+	//Widgets
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Widget_PressAnyKeyScreen);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Widget_MainMenuScreen);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Widget_IntroScreen);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Widget_OptionsScreen);
+
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Widget_ConfirmScreen);
+
+	//Options Image
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Image_TestImage);
+
+	//Levels
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Level_MainMenu);
+
+	//Options Tab ID's
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Tab_Gameplay);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Tab_Audio);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Tab_Video);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Tab_Control);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Tab_Language);
+
+	//Test Setting ID's
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Test_Setting_Difficulty);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Test_Setting_Image);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Test_Setting_SliderPercent);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Test_Setting_SliderValue);
+
+	//Audio Setting ID's
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Audio_Volume_Master);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Audio_Volume_Music);
+	K2H_RPG_API UE_DECLARE_GAMEPLAY_TAG_EXTERN(Audio_Volume_UI);
+
+}

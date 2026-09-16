@@ -8,7 +8,9 @@
 
 class UCommonTextBlock;
 /**
- * 
+ *  UCommButtonBase child which provides Button Implementation, 
+ *	This class provides implementaion for a UCommonTextBlock property,
+ *  and functions for managing it. Also has a text property for decribing the button's use.
  */
 UCLASS(Abstract, BlueprintType, meta = (DisableNativeTick))
 class K2H_RPG_API UK2HCommonButtonBase : public UCommonButtonBase
@@ -17,8 +19,12 @@ class K2H_RPG_API UK2HCommonButtonBase : public UCommonButtonBase
 
 public:
 
+	//Gettter & Setter for UCommonTextBlock, can be called from Blueprint
 	UFUNCTION(BlueprintCallable)
 	void SetButtonText(FText InText);
+
+	UFUNCTION(BlueprintCallable)
+	FText GetButtonDisplayText() const;
 
 private:
 
@@ -27,7 +33,11 @@ private:
 	//~ End UUserWidget Interface
 
 	//~ Begin UCommonButtonBase Interface
+	//overrided to apply Text Style to UCommonTextBlock
 	virtual void NativeOnCurrentTextStyleChanged() override;
+
+	//overrided to use delegate in UUISubsystem to handle 
+	//assigning Text to a Description widget
 	virtual void NativeOnHovered() override;
 	virtual void NativeOnUnhovered() override;
 	//~ End UCommonButtonBase Interface

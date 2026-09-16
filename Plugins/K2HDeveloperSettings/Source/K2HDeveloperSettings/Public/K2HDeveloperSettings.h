@@ -4,6 +4,9 @@
 
 #include "Modules/ModuleManager.h"
 
+/**
+ * Base Module
+ */
 class FK2HDeveloperSettingsModule : public IModuleInterface
 {
 public:

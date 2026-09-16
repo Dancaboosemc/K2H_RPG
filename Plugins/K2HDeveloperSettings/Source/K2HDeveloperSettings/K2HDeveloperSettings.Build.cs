@@ -28,7 +28,8 @@ public class K2HDeveloperSettings : ModuleRules
 				"Core",
 				"DeveloperSettings",
                 "GameplayTags",
-                "UMG"
+                "UMG",
+                "AudioModulation"
 				// ... add other public dependencies that you statically link with here ...
 			}
 			);

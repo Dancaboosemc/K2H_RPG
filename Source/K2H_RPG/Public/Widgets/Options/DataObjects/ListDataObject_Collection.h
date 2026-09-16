@@ -7,7 +7,8 @@
 #include "ListDataObject_Collection.generated.h"
 
 /**
- * 
+ * Collection Of UListDataObject_Base, to be registered with Option Tabs, 
+ * or to provide structure for Dependent Options
  */
 UCLASS()
 class K2H_RPG_API UListDataObject_Collection : public UListDataObject_Base

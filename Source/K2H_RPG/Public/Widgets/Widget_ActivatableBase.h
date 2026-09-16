@@ -8,7 +8,8 @@
 
 class AK2HPlayerController;
 /**
- * 
+ *	UCommonActivatableWidget providing implementation for managing 
+ *  a K2HPlayerController as the owning player controller
  */
 UCLASS(Abstract, BlueprintType, meta = (DisableNativeTick))
 class K2H_RPG_API UWidget_ActivatableBase : public UCommonActivatableWidget

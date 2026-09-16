@@ -3,11 +3,12 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Subsystems/K2HGameInstanceSubsystem.h"
+#include "GameSubsystems/K2HGameInstanceSubsystem.h"
 #include "GameFlowSubsystem.generated.h"
 
 /**
- * 
+ * Subsytem's purpose is to provide a central place to control game flow. 
+ * Currently has only functionality for loading the main menu and quitting the game.
  */
 UCLASS()
 class K2H_RPG_API UGameFlowSubsystem : public UK2HGameInstanceSubsystem
@@ -20,9 +21,6 @@ public:
 	virtual void Deinitialize() override;
 
 	UFUNCTION(BlueprintCallable, Category = "Game Flow")
-	void PlayIntro();
-
-	UFUNCTION(BlueprintCallable, Category = "Game Flow")
 	void ToMainMenu();
 
 	UFUNCTION(BlueprintCallable, Category = "Game Flow")
@@ -30,6 +28,7 @@ public:
 
 private:
 
+	//Helper Function for Loading Levels
 	void LoadMap(TSoftObjectPtr<UWorld> Map);
 	
 };

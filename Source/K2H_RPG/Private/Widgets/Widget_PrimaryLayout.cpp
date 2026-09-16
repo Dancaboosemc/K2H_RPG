@@ -11,11 +11,13 @@ UCommonActivatableWidgetContainerBase* UWidget_PrimaryLayout::FindWidgetStackByT
 	return RegisteredWidgetStackMap.FindRef(InTag);
 }
 
-void UWidget_PrimaryLayout::RegisterWidgetStack(UPARAM(meta = (Categories = "Frontend.WidgetStack")) 
+void UWidget_PrimaryLayout::RegisterWidgetStack(UPARAM(meta = (Categories = "WidgetStack")) 
 	FGameplayTag InStackTag, UCommonActivatableWidgetContainerBase* InStack)
 {
+	//if not design time
 	if (!IsDesignTime())
 	{
+		//Register if not already registered
 		if (!RegisteredWidgetStackMap.Contains(InStackTag))
 		{
 			RegisteredWidgetStackMap.Add(InStackTag, InStack);

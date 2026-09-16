@@ -1,9 +1,7 @@
 // Daniel McPherson, All Rights Reserved
 
 
-#include "Subsystems/K2HGameInstanceSubsystem.h"
-
-//~ Begin USubsyem Interface
+#include "GameSubsystems/K2HGameInstanceSubsystem.h"
 
 bool UK2HGameInstanceSubsystem::ShouldCreateSubsystem(UObject* Outer) const
 {
@@ -12,10 +10,9 @@ bool UK2HGameInstanceSubsystem::ShouldCreateSubsystem(UObject* Outer) const
 		TArray<UClass*> FoundClasses;
 		GetDerivedClasses(GetClass(), FoundClasses);
 
+		//Returns false if any subclasses were found
 		return FoundClasses.IsEmpty();
 	}
 
 	return false;
 }
-
-//~ End USubsyem Interface
